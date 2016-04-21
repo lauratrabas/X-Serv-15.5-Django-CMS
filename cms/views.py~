@@ -12,7 +12,7 @@ def pagina(request, identificador):
 def mostrar(resquest):
     lista=Pages.objets.all()
     respuesta ="<ol>"
-    for pagina in lista:
+    for pag in lista:
         respuesta +='<li><a href="' + str(pag.id) +'">' + pag.name + '</a>'
     respuesta += "</ol>"
     return HttpResponse(respuesta)
